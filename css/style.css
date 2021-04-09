@@ -224,6 +224,7 @@ body .portfolio_home__slider .slider_inner {
   transition: all 0.8s cubic-bezier(0, 0.6, 0.25, 1);
   transform-style: preserve-3d;
   pointer-events: none;
+  margin-top: 50px;
 }
 
 body .portfolio_home__slider .slider_inner.in {
@@ -743,7 +744,7 @@ body .portfolio_home__title .page_portfolio {
 
 #messenger {
   position: absolute;
-  top: 85%;
+  top: 90%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-family: monospace;
