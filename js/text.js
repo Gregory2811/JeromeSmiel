@@ -20,7 +20,7 @@ var Messenger = function(el){
         'Philosophique',
         'Poétique',
         'Spirituel',
-        'Quêtes et voyages Dimensionnels',
+        'Quêtes et Voyages Dimensionnels',
         'Dualité entre le bien et le mal',
         'Magie'
       ];
