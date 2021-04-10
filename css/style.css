@@ -19,7 +19,6 @@
   box-sizing: border-box;
 }
 
-
 body {
   background: #07101d;
   background-size: cover !important;
@@ -782,3 +781,240 @@ body .portfolio_home__title .page_portfolio {
   text-transform: uppercase;
   padding-top:10px;
 }
+
+
+
+
+
+
+/*book animation*/
+
+.book {
+  transition: opacity 0.4s 0.2s;
+}
+
+.page {
+  width: 30vw;
+  height: 30vw;
+  background-color: #111111;
+  float: left;
+  margin-bottom: 0.5em;
+  background: left top no-repeat;
+  background-size: cover;
+}
+
+.page p {
+  font-size: 15px;
+  text-align: center;
+}
+
+#couverture1 {
+  background-position: center;
+  background-image: url(../image/book-863418_1920.jpg);
+}
+
+#couverture2 {
+  background-position: center;
+  background-size: 30vw 30vw;
+  background-image: url(../image/Gandorr_et_le_Seigneur_du_Royaume_des_Brumes.jpg);
+}
+
+#couverture3 {
+  padding: 1.5rem;
+  background-color: #cd3234;
+  color: black;
+  font-family: 'Merienda', cursive;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+#couverture4 {
+  background-position: center;
+  background-size: 30vw 30vw;
+  background-image: url(../image/Gandorr_En_Voyage_sur_Aztlan_Et_Sur_Mictlan.jpg);
+}
+
+#couverture5 {
+  padding: 1.5rem;
+  background-color: #d7da39;
+  color: black;
+  font-family: 'Merienda', cursive;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+#couverture6 {
+  background-position: center;
+  background-size: 30vw 30vw;
+  background-image: url(../image/Gandorr_et_la_quête_dimmortalité.jpg);
+}
+
+#couverture7 {
+  padding: 1.5rem;
+  background-color: #9c64ea;
+  color: black;
+  font-family: 'Merienda', cursive;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+#couverture8 {
+  background-position: center;
+  background-size: 30vw 30vw;
+  background-image: url(../image/Gandorr_et_les_Planètes_Esclavagistes.jpg);
+}
+
+#couverture9 {
+  padding: 1.5rem;
+  background-color: #f89c15;
+  color: black;
+  font-family: 'Merienda', cursive;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+#couverture10 {
+  background-position: center;
+  background-size: 30vw 30vw;
+  background-image: url(../image/Gandorr_et_le_Symptôme_Malypse.jpg);
+}
+
+#couverture11 {
+  padding: 1.5rem;
+  background-color: #86be37;
+  color: black;
+  font-family: 'Merienda', cursive;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+#couverture12 {
+  background-position: center;
+  background-size: 30vw 30vw;
+  background-image: url(../image/Gandorr_à_la_Poursuite_de_lInvisible_Noak.jpg);
+}
+
+#couverture13 {
+  padding: 1.5rem;
+  background-color: #5fb226;
+  color: black;
+  font-family: 'Merienda', cursive;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.page:nth-child(even) {
+  clear: both;
+}
+
+.book {
+  perspective: 250vw;
+}
+
+.book .pages {
+  width: 60vw;
+  height: 30vw;
+  position: relative;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  border-radius: 4px;
+  /*box-shadow: 0 0 0 1px #e3dfd8;*/
+}
+
+.book .page {
+  float: none;
+  clear: none;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  width: 30vw;
+  height: 30vw;
+  transform-origin: 0 0;
+  transition: transform 1.4s;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  user-select: none;
+  background-color: #f0f0f0;
+}
+
+.book .page:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.7s;
+  z-index: 2;
+}
+
+.book .page:nth-child(odd) {
+  pointer-events: all;
+  transform: rotateY(0deg);
+  right: 0;
+  border-radius: 0 4px 4px 0;
+  background-image: linear-gradient(to right, rgba(0,0,0,.15) 0%, rgba(0,0,0,0) 10%);
+}
+
+.book .page:nth-child(odd):hover {
+  transform: rotateY(-15deg);
+}
+
+.book .page:nth-child(odd):hover:before {
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.book .page:nth-child(odd):before {
+  background: rgba(0, 0, 0, 0);
+}
+
+.book .page:nth-child(even) {
+  pointer-events: none;
+  transform: rotateY(180deg);
+  transform-origin: 100% 0;
+  left: 0;
+  border-radius: 4px 0 0 4px;
+  border-color: black;
+  background-image: linear-gradient(to left, rgba(0,0,0,.12) 0%, rgba(0,0,0,0) 10%);
+}
+
+.book .page:nth-child(even):before {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.book .page.grabbing {
+  transition: none;
+}
+
+.book .page.flipped:nth-child(odd) {
+  pointer-events: none;
+  transform: rotateY(-180deg);
+}
+
+.book .page.flipped:nth-child(odd):before {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.book .page.flipped:nth-child(even) {
+  pointer-events: all;
+  transform: rotateY(0deg);
+}
+
+.book .page.flipped:nth-child(even):hover {
+  transform: rotateY(15deg);
+}
+
+.book .page.flipped:nth-child(even):hover:before {
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.book .page.flipped:nth-child(even):before {
+  background: rgba(0, 0, 0, 0);
+}
+
+.page:nth-child(odd){
+  background-position: right top;
+}
+
