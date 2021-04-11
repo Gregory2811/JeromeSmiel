@@ -1040,3 +1040,37 @@ body .portfolio_home__title .page_portfolio {
   background-position: right top;
 }
 
+
+
+/*section page actualité*/
+
+.box {
+  border-color: #e2d4d4;
+  width: 550px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.section1{
+  background-color: #821313d1;
+  margin-left: 1rem;
+  font-family: 'Merienda', cursive;
+}
+
+.section1 p {
+  color: #e2d4d4;
+  padding: 1.5rem;
+}
+
+.section2 p {
+  color: #e2d4d4;
+  padding: 1.5rem;
+}
+
+.section2{
+  background-color: #821313d1;
+  font-family: 'Merienda', cursive;
+}
+
+/*button animation pop-up*/
+
