@@ -198,8 +198,9 @@ body .portfolio_home__work.expand .slideClone .title .f {
   transition: all 0.8s 0.4s cubic-bezier(0.79, -0.01, 0, 0.99);
 }
 
-body .portfolio_home__work.expand .slideClone .cats, body .portfolio_home__work.expand .slideClone .title1 {
+body .portfolio_home__work.expand .slideClone .cats, body .portfolio_home__work.expand .slideClone .title {
   left: -93px;
+  bottom: 70px;
   position: relative;
 }
 
@@ -795,7 +796,7 @@ body .portfolio_home__title .page_portfolio {
 
 .page {
   width: 30vw;
-  height: 30vw;
+  height: 45vw;
   background-color: #111111;
   float: left;
   margin-bottom: 0.5em;
@@ -805,7 +806,22 @@ body .portfolio_home__title .page_portfolio {
 
 .page p {
   font-size: 15px;
+  text-align: left;
+}
+
+.page h3 {
+  font-size: 18px;
+  color: #e2d4d4;
+  font-family: 'Merienda', cursive;
   text-align: center;
+}
+
+.page h2 {
+  text-decoration: underline;
+}
+
+.page strong {
+  margin-left: 90%;
 }
 
 #couverture1 {
@@ -901,6 +917,12 @@ body .portfolio_home__title .page_portfolio {
   font-family: 'Merienda', cursive;
   overflow: hidden;
   overflow-y: scroll;
+}
+
+#couverture14 {
+  background-position: center;
+  background-size: 30vw 30vw;
+  background-image: url(../image/fairy-tale-1077863_1280.jpg);
 }
 
 .page:nth-child(even) {
