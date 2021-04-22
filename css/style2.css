@@ -1,139 +1,175 @@
-body {
+.carousel > input[type=radio]:nth-child(5):checked ~ .carousel__next > label:nth-child(1), .carousel > input[type=radio]:nth-child(5):checked ~ .carousel__prev > label:nth-child(4), .carousel > input[type=radio]:nth-child(4):checked ~ .carousel__next > label:nth-child(5), .carousel > input[type=radio]:nth-child(4):checked ~ .carousel__prev > label:nth-child(3), .carousel > input[type=radio]:nth-child(3):checked ~ .carousel__next > label:nth-child(4), .carousel > input[type=radio]:nth-child(3):checked ~ .carousel__prev > label:nth-child(2), .carousel > input[type=radio]:nth-child(2):checked ~ .carousel__next > label:nth-child(3), .carousel > input[type=radio]:nth-child(2):checked ~ .carousel__prev > label:nth-child(1), .carousel > input[type=radio]:nth-child(1):checked ~ .carousel__next > label:nth-child(2), .carousel > input[type=radio]:nth-child(1):checked ~ .carousel__prev > label:nth-child(5) {
+	opacity: 1 !important;
+	z-index: 3;
+  }
+
+  @import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap');
+  
+  *,
+  *:before,
+  *:after {
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+  }
+  
+  body {
 	background: #74120e;
+	margin: 0;
+  }
+
+  #titleBook {
+	  color: #e2d4d4;
+	  text-align: center;
+	  font-family: 'Merienda', cursive;
+  }
+  
+  .container {
+	width: 900px;
+	min-width: 900px;
+	margin: 50px auto;
+  }
+  
+  .carousel {
+	width: 100%;
+	position: relative;
 	overflow: hidden;
-}
-
-.m {
-	display: block;
-	width: 232px;
-	height: 90vh;
+  }
+  .carousel > input[type=radio] {
+	position: absolute;
+	left: 0;
+	opacity: 0;
+	top: 0;
+  }
+  .carousel > input[type=radio]:checked ~ .carousel__items .carousel__item,
+  .carousel > input[type=radio]:checked ~ .carousel__prev > label,
+  .carousel > input[type=radio]:checked ~ .carousel__next > label {
+	opacity: 0;
+  }
+  .carousel > input[type=radio]:nth-child(1):checked ~ .carousel__items .carousel__item:nth-child(1) {
+	opacity: 1;
+  }
+  .carousel > input[type=radio]:nth-child(1):checked ~ .carousel__nav > label:nth-child(1) {
+	background: #ccc;
+	cursor: default;
+	pointer-events: none;
+  }
+  .carousel > input[type=radio]:nth-child(2):checked ~ .carousel__items .carousel__item:nth-child(2) {
+	opacity: 1;
+  }
+  .carousel > input[type=radio]:nth-child(2):checked ~ .carousel__nav > label:nth-child(2) {
+	background: #ccc;
+	cursor: default;
+	pointer-events: none;
+  }
+  .carousel > input[type=radio]:nth-child(3):checked ~ .carousel__items .carousel__item:nth-child(3) {
+	opacity: 1;
+  }
+  .carousel > input[type=radio]:nth-child(3):checked ~ .carousel__nav > label:nth-child(3) {
+	background: #ccc;
+	cursor: default;
+	pointer-events: none;
+  }
+  .carousel > input[type=radio]:nth-child(4):checked ~ .carousel__items .carousel__item:nth-child(4) {
+	opacity: 1;
+  }
+  .carousel > input[type=radio]:nth-child(4):checked ~ .carousel__nav > label:nth-child(4) {
+	background: #ccc;
+	cursor: default;
+	pointer-events: none;
+  }
+  .carousel > input[type=radio]:nth-child(5):checked ~ .carousel__items .carousel__item:nth-child(5) {
+	opacity: 1;
+  }
+  .carousel > input[type=radio]:nth-child(5):checked ~ .carousel__nav > label:nth-child(5) {
+	background: #ccc;
+	cursor: default;
+	pointer-events: none;
+  }
+  .carousel__items {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	width: 100%;
+	height: 600px;
 	position: relative;
-	float: right;
-	padding: 0 30px 0 40px;
-	margin-top: 40px;
-	box-shadow: -2px 0 0 #e2d4d4;
-}
-
-.m .li {
-	display: block;
-	width: 100px;
-	height: 100px;
-	position: relative;
-	z-index: 1000;
-	float: left;
-	margin: 0 10px 10px 0;
-	border: solid 3px #e2d4d4;
-	background-color: #e2d4d4;
-	outline: none;
-	cursor: pointer;
-}
-
-.m .li:focus img {
-	opacity: .3;
-}
-
-.m .li > img {
-	width: 100px;
-	height: 100px;
-	min-width: 100px;
-	min-height: 100px;
-	max-width: 100px;
-	max-height: 100px;
-	position: absolute;
-	left: 0;
-	top: 0;
-	transition: .3s;
-}
-
-.cube-wrap {
-	width: 500px;
-	height: 500px;
-	position: absolute;
-	top: 0;
-	right: 400px;
-	perspective: 1000px;
-}
-
-.cube {
-	width: 500px;
-	height: 500px;
+  }
+  .carousel__item {
 	position: absolute;
 	top: 0;
 	left: 0;
-	transform-style: preserve-3d;
-	transform: rotateX(0deg) translateZ(-250px);
-	transition: 2s 9999999s;
-}
-
-.cube div {
-	width: 500px;
-	height: 500px;
-	position: absolute;
-	top: 0;
-	left: 0;
-	background-color: #222;
-}
-
-.cube .front {
-	transform: rotateY(0deg) translateZ(250px);
-}
-
-.cube .back {
-	transform: rotateX(180deg) translateZ(250px);
-}
-
-.cube .right {
-	transform: rotateY(90deg) translateZ(250px);
-}
-
-.cube .left {
-	transform: rotateY(-90deg) translateZ(250px);
-}
-
-.cube .top {
-	transform: rotateX(90deg) translateZ(250px);
-}
-
-.cube .bottom {
-	transform: rotateX(-90deg) translateZ(250px);
-}
-
-.cube img {
 	width: 100%;
 	height: 100%;
-	min-width: 100%;
-	min-height: 100%;
-	max-width: 100%;
-	max-height: 100%;
+	z-index: 1;
+	transition: opacity 2s;
+	-webkit-transition: opacity 2s;
+  }
+  .carousel__item img {
+	width: 100%;
+	vertical-align: middle;
+  }
+  .carousel__prev > label, .carousel__next > label {
+	border: 1px solid #fff;
+	border-radius: 50%;
+	cursor: pointer;
+	display: block;
+	width: 40px;
+	height: 40px;
 	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	transition: all 0.3s ease;
+	-webkit-transition: all 0.3s ease;
+	opacity: 0;
+	z-index: 2;
+  }
+  .carousel__prev > label:hover, .carousel__prev > label:focus, .carousel__next > label:hover, .carousel__next > label:focus {
+	opacity: 0.5 !important;
+  }
+  .carousel__prev > label:before, .carousel__prev > label:after, .carousel__next > label:before, .carousel__next > label:after {
+	content: "";
+	position: absolute;
+	width: inherit;
+	height: inherit;
+  }
+  .carousel__prev > label:before, .carousel__next > label:before {
+	background: linear-gradient(to top, #fff 0%, #fff 10%, rgba(51, 51, 51, 0) 10%), linear-gradient(to left, #fff 0%, #fff 10%, rgba(51, 51, 51, 0) 10%);
+	width: 60%;
+	height: 60%;
+	top: 20%;
+  }
+  .carousel__prev > label {
+	left: 2%;
+  }
+  .carousel__prev > label:before {
+	left: 35%;
+	top: 20%;
+	transform: rotate(135deg);
+	-webkit-transform: rotate(135deg);
+  }
+  .carousel__next > label {
+	right: 2%;
+  }
+  .carousel__next > label:before {
+	left: 10%;
+	transform: rotate(315deg);
+	-webkit-transform: rotate(315deg);
+  }
+  .carousel__nav {
+	position: absolute;
+	bottom: 3%;
 	left: 0;
-	top: 0;
-}
-
-.li:focus ~ .cube-wrap .cube {
-	transition: 1.2s;
-}
-
-.m1:focus ~ .cube-wrap .cube {
-	transform: translateZ(-250px) rotateY(0deg);
-}
-
-.m2:focus ~ .cube-wrap .cube {
-	transform: translateZ(-250px) rotateY(-90deg);
-}
-
-.m3:focus ~ .cube-wrap .cube {
-	transform: translateZ(-250px) rotateX(-90deg);
-}
-
-.m4:focus ~ .cube-wrap .cube {
-	transform: translateZ(-250px) rotateY(90deg);
-}
-
-.m5:focus ~ .cube-wrap .cube {
-	transform: translateZ(-250px) rotateX(90deg);
-}
-
-.m6:focus ~ .cube-wrap .cube {
-	transform: translateZ(-250px) rotateX(180deg);
-}
+	text-align: center;
+	width: 100%;
+	z-index: 3;
+  }
+  .carousel__nav > label {
+	border: 1px solid #fff;
+	display: inline-block;
+	border-radius: 50%;
+	cursor: pointer;
+	margin: 0 0.125%;
+	width: 20px;
+	height: 20px;
+  }
